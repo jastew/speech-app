@@ -1,0 +1,18 @@
+<div class="form-inline speech__controls">
+    <div class="form-group speech__controls-inner">
+        <div class="input-group">
+            <input class="form-control" type="text" value="{{$ctrl.sentence}}">
+            <div class="input-group-btn">
+                <button class="btn btn-primary" ng-click="$ctrl.speak()">Speak</button>
+                <button class="btn btn-default" ng-click="$ctrl.undo()">&lt;</button>
+                <button class="btn btn-danger" ng-click="$ctrl.clear()">x</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="speech__tiles">
+    <div ng-repeat="word in $ctrl.words" ng-click="$ctrl.addWord(word.word)" class="speech__tile">
+        <span class="speech__tile-text">{{ word.word }}</span>
+    </div>
+</div>

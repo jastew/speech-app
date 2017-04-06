@@ -6,7 +6,7 @@
 
 <ul class="phone-thumbs">
   <li ng-repeat="img in $ctrl.phone.images">
-    <img ng-src="{{img}}" />
+    <img ng-src="{{img}}" ng-dblclick="$ctrl.dblclick(img)" />
   </li>
 </ul>
 

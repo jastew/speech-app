@@ -6,6 +6,38 @@ h1 {
   border-bottom: 1px solid gray;
 }
 
+.speech__controls {
+  margin-bottom: 1em;
+}
+.speech__controls-inner {
+  display: block !important;
+}
+.speech__tile {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 0.5em 0.5em 0;
+  text-align: center;
+  background: #eeeeee;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.speech__tile:before {
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+.speech__tile-text {
+  display: inline-block;
+}
+.speech__tile:hover {
+  background: #eaeaea;
+}
+
 /* View: Phone list */
 .phones {
   list-style: none;

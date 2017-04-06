@@ -9,6 +9,10 @@ angular.
       function PhoneDetailController($http, $routeParams) {
         var self = this;
 
+        self.dblclick = function (img) {
+          alert("You clicked the image " + img);
+        }
+
         $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
           self.phone = response.data;
         });
