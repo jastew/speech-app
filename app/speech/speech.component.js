@@ -38,6 +38,14 @@ angular.
                 self.updateSentence();
             };
 
+            self.favourite = function() {
+                if (self.sentence) {
+                    self.words.push({
+                        "word": self.sentence
+                    });
+                }
+            };
+
             $http.get('words/words.json').then(function(response) {
                 self.words = response.data;
             });
